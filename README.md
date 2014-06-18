@@ -1,7 +1,7 @@
 # Quiet Routes
 [![Continuous Integration status](https://secure.travis-ci.org/evrone/quiet_assets.png)](http://travis-ci.org/evrone/quiet_assets)
 
-Quiet Routes has been made in referrence to [quiet_assets](https://github.com/evrone/quiet_assets).
+Quiet Routes implemented with reference to [quiet_assets](https://github.com/evrone/quiet_assets).
 This is turns off the Rails particular log.
 For example, this can suppress the access log of ping target from the load balancer.
 
@@ -21,7 +21,7 @@ Then, from the command line, run:
 
 After installation, place the following in your `config/application.rb` file:
 
-    config.quiet_assets = %w(pass_to_silent_route_list)
+    config.quiet_assets = %w(/silent_route1 /silent_route2 ...)
 
 ## Contributing
 
