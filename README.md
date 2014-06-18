@@ -21,7 +21,7 @@ Then, from the command line, run:
 
 After installation, place the following in your `config/application.rb` file:
 
-    config.quiet_assets = %w(/silent_route1 /silent_route2 ...)
+    config.quiet_routes = %w(/silent_route1 /silent_route2 ...)
 
 ## Contributing
 
