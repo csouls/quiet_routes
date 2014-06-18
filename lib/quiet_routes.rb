@@ -15,7 +15,7 @@ module QuietRoutes
       Rails::Rack::Logger.class_eval do
         def call_with_quiet_routes(env)
           begin
-            if QUIET_PATHS.find { |path| env['PATH_INFO'].start_with?(path) }
+            if QUIET_PATHS.include?(env['PATH_INFO'])
               env[KEY] = Rails.logger.level
               Rails.logger.level = Logger::ERROR
             end

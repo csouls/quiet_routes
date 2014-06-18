@@ -40,6 +40,7 @@ class HelperTest < Minitest::Unit::TestCase
       routes {
         root to: 'home#index'
         get '/status', to: 'home#status'
+        get '/status/log', to: 'home#status'
       }
     end
   end
@@ -69,8 +70,14 @@ class HelperTest < Minitest::Unit::TestCase
     initialize! { config.quiet_routes = ['/status'] }
 
     app.call request('/status')
-
     assert_equal '', output.string
+  end
+
+  def test_status_log_url_with_quiet_routes_option
+    initialize! { config.quiet_routes = ['/status'] }
+
+    app.call request('/status/log')
+    assert_match(/Started GET \"\/status\/log\" for  at/, output.string)
   end
 
   def test_in_multi_thread_env
