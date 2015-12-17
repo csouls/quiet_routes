@@ -1,9 +1,11 @@
 # Quiet Routes
-[![Continuous Integration status](https://secure.travis-ci.org/evrone/quiet_assets.png)](http://travis-ci.org/evrone/quiet_assets)
+[![Build Status](https://travis-ci.org/csouls/quiet_routes.svg)](https://travis-ci.org/csouls/quiet_routes)
 
 Quiet Routes implemented with reference to [quiet_assets](https://github.com/evrone/quiet_assets).
+
 This is turns off the Rails particular log.
-For example, this can suppress the access log of ping target from the load balancer.
+
+e.g. Will be able to suppress the health check log of AWS ELB or other load balancers.
 
 Support Ruby on Rails = 4.1
 
